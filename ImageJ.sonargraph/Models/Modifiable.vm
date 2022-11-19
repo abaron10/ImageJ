@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<virtualModel version="12.4.0.768">
+	<resolutions>
+		<ignore date="2022-11-18T22:37:31.414Z" description="g">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:857a756cfde2220b9cadb72b02c60bf8|ade73a34f5e95df27fcc3211228628a1</elementPattern>
+			<matching info="2 occurrences with 47 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="6cYffCqeF28f9YSA5Fl1bMoIUPlJrkU/K5YmLEs+/Zs8uRIjNSmsA2qrHdfysw5ANUO1KBcRL599ktRPqgHOk85cpkDBq/GJNhFHX58f3qv7Yi0L0+6BxkXUAa05XwAPZy+xu7TpMGw=">Workspace:Main:./src:ij:process:FloatProcessor.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="6cYffCqeF28f9YSA5Fl1bMoIUPlJrkU/K5YmLEs+/Zs8uRIjNSmsA2qrHdfysw5ANUO1KBcRL599ktRPqgHOk85cpkDn3dWJNhFHX58f3qv7Yi0L0+6BxkXUAa0+pvH9Zy+xu7TpMGw=">Workspace:Main:./src:ij:process:ShortProcessor.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:34.994Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:b4bcc7b966f85d39bcf1df43db124df4|1d1ea60c7e065d03387f383f31e4f42a</elementPattern>
+			<matching info="2 occurrences with 46 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="yyaXPWl2uxyf6q2U4jO1t2qnblZ1+iuYwR6z/QUgKdQo8K22O0VednecGBTgrhQHCAwsqVBHT2zC2FvALT0fgIze1Pj/xyl9/IO/UL5bp8yr98ZG6SZued6476fDwYt51HdkZwwBbmMCNCr3Iin6J+hI6McRw2etcQ+CrGkY8/QjsWvG">Workspace:Main:./src:ij:process:FloatProcessor.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="yyaXPWl2uxyf6q2U4jO1t2qnblZ1+iuYwR6z/QUgKdQo8K22O0VednecGBTgrhQHCAwsqVBHT2zC2FvALT0fgIze1Pj/xyl9/IO/UL5bp8yr98ZG6SZued6476fDwYt51HdkZwwBbmMCNCr3Iin6J+hI6McRw2etcQ+CrGkY8/QjsWvG">Workspace:Main:./src:ij:process:IntProcessor.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.604Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:cf2064f77950dbb0294aeb98691943fd|4290e298f8b5f4b4dce03e330bba7660</elementPattern>
+			<matching info="2 occurrences with 52 line(s) found in 1 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="cV5W99hc8weMRGbZYSwMV18X5nz76fO+GiqwQtSbYdtgG9LGKuoyzZs+fZwqHf6aPaGUs+2ztUv815fjRgX+vP6i3HdDqMYg3y73H/1fLHxL5v52UgOclDGitE0BJNTPcV5W99hc8wdfF+Z8++nzvhoqsEI=">Workspace:Main:./src:ij:plugin:frame:SyncWindows.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="cV5W99hc8weMRGbZYSwMV18X5nz76fO+GiqwQtSbYdtgG9LGKuoyzZs+fZwqHf6aPaGUs+2ztUv815fjRgX+vP6i3HffLvcfZ14FcEOoxiDfLvcf/V8sfEvm/nb7GgyPMaK0TRb/lqlxXlb32FzzB4xEZtlhLAxXXxfmfPvp874aKrBC">Workspace:Main:./src:ij:plugin:frame:SyncWindows.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:4058577e87161146a10fe302d20a98fd|8cfed4e1757ab0af639610b785d4a6a0</elementPattern>
+			<matching info="2 occurrences with 59 line(s) found in 1 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="QVOSU8qoRTxXHihaE39iCcQoFuvN+iamCDt4V1t9OgacyLlWfRfxYgA/xhIdq9CudJZiZDQS9HyqEZpsWct3xY/O/x1AAopuIwhGftPIi1vUeXfDGM/LLLq4AOgU66HgqnUqck/twILhn3NejkHfkKTOVLwiDUn/VBho4arAqDiAhGmzPaT4maKLRnM3NNTE9zcI4nld7ScQWKwHZpV2Mg==">Workspace:Main:./src:ij:plugin:Projector.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="QVOSU8qoRTxXHihaE39iCcQoFuvN+iamCDt4V1t9OgacyLlW37JUGAA/xhIdq9CudJZiZDJeG92qEZpsWct3xY/O/x1AAopuIwhGftPIi1sfReSK5201Srq4AOgU66Hg6ILJ/llK44zhn3NejkHfkKTOVLwiDUn/VBho4arAqDiAhGmzPaT4maKLRnM3NNTE9zcI4hfRX2wt3wyMO7Jtinld7ScQWKwHZpV2Mg==">Workspace:Main:./src:ij:plugin:Projector.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:857a756cfde2220b9cadb72b02c60bf8|5719bac923dc8a4e576a7d1dd56b1937</elementPattern>
+			<matching info="2 occurrences with 48 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="YP4zmBt+3IYte9UK7bO1S/gClhj6ErO8vnDAPNNp1ODU+bi78YblI+2ztUu7KMJ6wTa5WIhgmF/W9tBK0dtevtKiJMmHmTdnDILeiPmltqLrdoWaTCTOxOkjy6Fv/O9dlNgif2m4gyb5pbai2rsXcECP5zjKbJcVKLlbQJRfPzpA/ZpJt/hKXA==">Workspace:Main:./src:ij:process:FloatProcessor.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="YP4zmBt+3IYte9UK7bO1S/gClhj6ErO8vnDAPNNp1ODU+bi78YblI+2ztUu7KMJ6wTa5WIhgmF/W9tBK0dtevtKiJMmHmTdnDILeiPmltqLrdoWaTCTOxOkjy6GmvjF9lNgif2m4gyb5pbai2rsXcECP5ziyQrD1KLlbQJRfPzpA/ZpJt/hKXA==">Workspace:Main:./src:ij:process:ShortProcessor.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:d2e090b3b1fe35e37eb7eacf55061e0f|2a0dd0206c27f48074f0a45d02400a34</elementPattern>
+			<matching info="2 occurrences with 44 line(s) found in 1 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="Sqfwdq38MYwa/UQ+UBS7zvSiXrXeIZHw2w+R+XWlbrcT4LjxVld787KCNh0aGWGiYPOpmL6CPMF1pW639QIs1VZXe/OygjYdGhlhoo50o9CVmy35daVut0T6pPFWV3vzsoI2HRoZYaID+ChJsraN2XWlbrfiomxRVld787KCNh0aGWGi">Workspace:Main:./src:ij:plugin:Orthogonal_Views.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="Sqfwdq38MYwa/UQ+UBS7zvSiXrXeIZHw2w+R+XWlbrcT4LjxHo/y5FTTvLAaGWGiYPOpmL6CPMF1pW639QIs1R6P8uRU07ywGhlhoo50o9CVmy35daVut0T6pPEej/LkVNO8sBoZYaID+ChJsraN2XWlbrfiomxRHo/y5FTTvLAaGWGi">Workspace:Main:./src:ij:plugin:Orthogonal_Views.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:eccf3398cb66531d34ea7d4edae7fc78|2497652589b243f9cc14028ebb8bd6d9</elementPattern>
+			<matching info="2 occurrences with 84 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="zqJ8SnmR78Z+Kx0NerNY1j9FPrbSFXnxlbKSKwDUl2jIqg++CQL/P7PDOQHf1oyJ5tAM4Xwtf3F3pC9Q1NgmeciqD7797pO5CDt4VyTpHGkpbnD8MtI/SsgPvnSNj7QEyKoPvoW12JwOFJz1BhFr6EvdA51nRDHlgnSTx6QCCv/aADYjfq5m54WkXCpT7qLydbQ8iNrAahpEE0p4621Fcy0v/M1sq8YoJubOO0APylApUoOn2aGRdFQPeSVhVhR9bpZefd1FjEFEjDpaDsy1G7Rx/y8wsoHxXKC9z+ZFxHOzgH6pQRFAgkVLizeqW8r1D2wKs3R8SnEYGUNibfp2Fm8tzzBrjnkqmNBd0WER+DHkX32Sk3nMDFnjaxpSMkjo3JyoTYE5708=">Workspace:Main:./src:ij:gui:HistogramPlot.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="zqJ8SnmR78Z+Kx0NerNY1j9FPrbSFXnxlbKSK58tSdXIqg++CQL/P7PDOQHf1oyJ5tAM4Xwtf3F3pC9QkcWqrciqD7797pO5CDt4VyTpHGkpbnD8MtI/SsgPvnS7p8MhyKoPvoW12JwOFJz1S90DnWdEMeWCdJPHpAIK/9oANiN+rmbnhaRcKlPuovJ1tDyI2sBqGkQTSnjrbUVzLS/8zWyrxigm5s47QA/KUClSg6fZoZF0VA95JWFWFH1ull593UWMQUSMOloOzLUbtHH/LzCygfFcoL3P5kXEc7OAfqlBEUCCRUuLN6pbyvUPbAqzdHxKcRgZQ2Jt+nYWby3PMGuOeSqY0F3RYRH4MeRffZKTecwMWeNrGlIySOjcnKhNgTnvTw==">Workspace:Main:./src:ij:gui:HistogramWindow.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:eccf3398cb66531d34ea7d4edae7fc78|2a822824ee584f45174795237962966b</elementPattern>
+			<matching info="2 occurrences with 44 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="l4HeU9Ce8CGZH3bWkJLeRg2gXrAtucE422CHzAKNtNfidBxZD7ghubynmT7ZHjmsGOHEK8UelMp3aY8JbD5fHwAvjTnR7uMV4Kzp58S1hAjq8IDrWuG5ax8rkYrHesdq9fwfLeAeFpvTzCYHFfv82Tuq5BySqlwkUzby/hPEBi8tucE422CHzEJCtiyYJCDi">Workspace:Main:./src:ij:gui:HistogramPlot.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="l4HeU9Ce8CGZH3bWkJLeRg2gXrAtucE422CHzAKNtNfidBxZD7ghubynmT7ZHjmsGOHEK8UelMp3aY8JbD5fHwAvjTnR7uMVj/UMysS1hAjq8IDrWuG5ax8rkYrHesdq9fwfLeAeFpvTzCYHFfv82Tuq5BySqlwkUzby/soy94aAp7YK22CHzEJCtiz6lbodnxqk55gkIOI=">Workspace:Main:./src:ij:gui:HistogramWindow.java</elementPattern>
+			</matching>
+		</ignore>
+		<ignore date="2022-11-18T22:42:39.605Z" description="">
+			<type class="com.hello2morrow.sonargraph.core.model.element.CoreIssueId" name="DuplicateCodeBlock"></type>
+			<elementPattern type="FullyQualifiedName">Files:BaseDirectory:SystemDirectory:Analyzers:DuplicateCode:Result:eccf3398cb66531d34ea7d4edae7fc78|d8d197172a0278cb10f7299e635e5c7b</elementPattern>
+			<matching info="2 occurrences with 93 line(s) found in 2 file(s)">
+				<elementPattern type="FullyQualifiedName" hash="hE0LOw/UYBmFOqC8wGFkITmHD4fCl6CJlpvbjsrzAT4GEWvouDG7OIlE6Dp0EeUSje+l8ylucPyIhNqySIXf2kyg3PaXRWxnjp8tnGTg1E9zdUwKyo0vXrvKP+kXTNuyKgF2REZbfgU5owIGAC+NOcAB7fpv0+55vtPV6s5uIMaNdiajX0fLBveivyw3sDMDRBNKeOUkZlG4F2QpVxCnscUfH2Ktb8/j3H4N7W1tdjRIeYbH10BC/KG09aIeaE+OkGdjf0G4GOf2Euc4fqo9XF2sFh02hAihSofYcaNKS6MKyCsQw/RsicYEii3XQEL8p1oU88TyRFJ4HT8xAC+NOb1xGWw0S0VuR2HJhMd63nvN7Edusn/RdAAvjTmzYm+9xknebAYRa+gS2f16P/iUYWk1x5OE9nM3RqOjAlZNdG8AL405T5tpWw==">Workspace:Main:./src:ij:gui:HistogramPlot.java</elementPattern>
+				<elementPattern type="FullyQualifiedName" hash="hE0LOw/UYBmFOqC8OYcPh8KXoImWm9uOyvMBPgYRa+i4Mbs4iUToOnQR5RKN76XzKW5w/IiE2rJIhd/aTKDc9pdFbGeOny2cZODUT1KXfhDKjS9eBF4L+rvKP+kXTNuyKgF2REZbfgU5owIGAC+NOcAB7fpv0+55vtPV6s5uIMaNdiajX0fLBveivyw3sDMDRBNKeOUkZlG4F2QpVxCnscUfH2Ktb8/j3H4N7W1tdjRIeYbH10BC/KG09aIeaE+OkGdjf0G4GOf2Euc4fqo9XF2sFh02hAihSofYcaNKS6MKyCsQw/RsicYEii3XQEL8p1oU88TyRFJ4HT8xAC+NOb1xGWw0S0VuR2HJhMd63nvN7Edusn/RdAAvjTmzYm+9xknebAYRa+gS2f16P/iUYWk1x5OE9nM3RqOjAlZNdG8AL405T5tpWw==">Workspace:Main:./src:ij:gui:HistogramWindow.java</elementPattern>
+			</matching>
+		</ignore>
+	</resolutions>
+</virtualModel>

@@ -60,7 +60,6 @@ public class AutoThresholder {
 			case Otsu: threshold = Otsu(histogram); break;
 			case Percentile: threshold = Percentile(histogram); break;
 			case RenyiEntropy: threshold = RenyiEntropy(histogram); break;
-			case Shanbhag: threshold = Shanbhag(histogram); break;
 			case Triangle: threshold = Triangle(histogram); break;
 			case Yen: threshold = Yen(histogram); break;
 		}
@@ -441,91 +440,6 @@ public class AutoThresholder {
 			new and old threshold values is less than the tolerance */
 		}
 		while ( Math.abs ( new_thresh - old_thresh ) > tolerance );
-		return threshold;
-	}
-
-	int MaxEntropy(int [] data ) {
-		// Implements Kapur-Sahoo-Wong (Maximum Entropy) thresholding method
-		// Kapur J.N., Sahoo P.K., and Wong A.K.C. (1985) "A New Method for
-		// Gray-Level Picture Thresholding Using the Entropy of the Histogram"
-		// Graphical Models and Image Processing, 29(3): 273-285
-		// M. Emre Celebi
-		// 06.15.2007
-		// Ported to ImageJ plugin by G.Landini from E Celebi's fourier_0.8 routines
-		int threshold=-1;
-		int ih, it;
-		int first_bin;
-		int last_bin;
-		double tot_ent;  /* total entropy */
-		double max_ent;  /* max entropy */
-		double ent_back; /* entropy of the background pixels at a given threshold */
-		double ent_obj;  /* entropy of the object pixels at a given threshold */
-		double [] norm_histo = new double[256]; /* normalized histogram */
-		double [] P1 = new double[256]; /* cumulative normalized histogram */
-		double [] P2 = new double[256]; 
-
-		double total =0;
-		for (ih = 0; ih < 256; ih++ ) 
-			total+=data[ih];
-
-		for (ih = 0; ih < 256; ih++ )
-			norm_histo[ih] = data[ih]/total;
-
-		P1[0]=norm_histo[0];
-		P2[0]=1.0-P1[0];
-		for (ih = 1; ih < 256; ih++ ){
-			P1[ih]= P1[ih-1] + norm_histo[ih];
-			P2[ih]= 1.0 - P1[ih];
-		}
-
-		/* Determine the first non-zero bin */
-		first_bin=0;
-		for (ih = 0; ih < 256; ih++ ) {
-			if ( !(Math.abs(P1[ih])<2.220446049250313E-16)) {
-				first_bin = ih;
-				break;
-			}
-		}
-
-		/* Determine the last non-zero bin */
-		last_bin=255;
-		for (ih = 255; ih >= first_bin; ih-- ) {
-			if ( !(Math.abs(P2[ih])<2.220446049250313E-16)) {
-				last_bin = ih;
-				break;
-			}
-		}
-
-		// Calculate the total entropy each gray-level
-		// and find the threshold that maximizes it 
-		max_ent = Double.MIN_VALUE;
-
-		for ( it = first_bin; it <= last_bin; it++ ) {
-			/* Entropy of the background pixels */
-			ent_back = 0.0;
-			for ( ih = 0; ih <= it; ih++ )  {
-				if ( data[ih] !=0 ) {
-					ent_back -= ( norm_histo[ih] / P1[it] ) * Math.log ( norm_histo[ih] / P1[it] );
-				}
-			}
-
-			/* Entropy of the object pixels */
-			ent_obj = 0.0;
-			for ( ih = it + 1; ih < 256; ih++ ){
-				if (data[ih]!=0){
-				ent_obj -= ( norm_histo[ih] / P2[it] ) * Math.log ( norm_histo[ih] / P2[it] );
-				}
-			}
-
-			/* Total entropy */
-			tot_ent = ent_back + ent_obj;
-
-			// IJ.log(""+max_ent+"  "+tot_ent);
-			if ( max_ent < tot_ent ) {
-				max_ent = tot_ent;
-				threshold = it;
-			}
-		}
 		return threshold;
 	}
 
@@ -1000,91 +914,6 @@ public class AutoThresholder {
 
 		return opt_threshold;
 	}
-
-
-	int Shanbhag(int [] data ) {
-		// Shanhbag A.G. (1994) "Utilization of Information Measure as a Means of
-		//  Image Thresholding" Graphical Models and Image Processing, 56(5): 414-419
-		// Ported to ImageJ plugin by G.Landini from E Celebi's fourier_0.8 routines
-		int threshold;
-		int ih, it;
-		int first_bin;
-		int last_bin;
-		double term;
-		double tot_ent;  /* total entropy */
-		double min_ent;  /* max entropy */
-		double ent_back; /* entropy of the background pixels at a given threshold */
-		double ent_obj;  /* entropy of the object pixels at a given threshold */
-		double [] norm_histo = new double[256]; /* normalized histogram */
-		double [] P1 = new double[256]; /* cumulative normalized histogram */
-		double [] P2 = new double[256]; 
-
-		double total =0;
-		for (ih = 0; ih < 256; ih++ ) 
-			total+=data[ih];
-
-		for (ih = 0; ih < 256; ih++ )
-			norm_histo[ih] = data[ih]/total;
-
-		P1[0]=norm_histo[0];
-		P2[0]=1.0-P1[0];
-		for (ih = 1; ih < 256; ih++ ){
-			P1[ih]= P1[ih-1] + norm_histo[ih];
-			P2[ih]= 1.0 - P1[ih];
-		}
-
-		/* Determine the first non-zero bin */
-		first_bin=0;
-		for (ih = 0; ih < 256; ih++ ) {
-			if ( !(Math.abs(P1[ih])<2.220446049250313E-16)) {
-				first_bin = ih;
-				break;
-			}
-		}
-
-		/* Determine the last non-zero bin */
-		last_bin=255;
-		for (ih = 255; ih >= first_bin; ih-- ) {
-			if ( !(Math.abs(P2[ih])<2.220446049250313E-16)) {
-				last_bin = ih;
-				break;
-			}
-		}
-
-		// Calculate the total entropy each gray-level
-		// and find the threshold that maximizes it 
-		threshold =-1;
-		min_ent = Double.MAX_VALUE;
-
-		for ( it = first_bin; it <= last_bin; it++ ) {
-			/* Entropy of the background pixels */
-			ent_back = 0.0;
-			term = 0.5 / P1[it];
-			for ( ih = 1; ih <= it; ih++ )  { //0+1?
-				ent_back -= norm_histo[ih] * Math.log ( 1.0 - term * P1[ih - 1] );
-			}
-			ent_back *= term;
-
-			/* Entropy of the object pixels */
-			ent_obj = 0.0;
-			term = 0.5 / P2[it];
-			for ( ih = it + 1; ih < 256; ih++ ){
-				ent_obj -= norm_histo[ih] * Math.log ( 1.0 - term * P2[ih] );
-			}
-			ent_obj *= term;
-
-			/* Total entropy */
-			tot_ent = Math.abs ( ent_back - ent_obj );
-
-			if ( tot_ent < min_ent ) {
-				min_ent = tot_ent;
-				threshold = it;
-			}
-		}
-		return threshold;
-	}
-
-
 	int Triangle(int [] data ) {
 		//  Zack, G. W., Rogers, W. E. and Latt, S. A., 1977,
 		//  Automatic Measurement of Sister Chromatid Exchange Frequency,

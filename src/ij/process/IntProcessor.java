@@ -97,11 +97,7 @@ public class IntProcessor extends ColorProcessor {
 		return image;
 	}
 
-	/** Returns this image as an 8-bit BufferedImage . */
-	public BufferedImage getBufferedImage() {
-		return convertToByte(true).getBufferedImage();
-	}
-	
+
 	@Override
 	public void setColorModel(ColorModel cm) {
 		if (cm!=null && !(cm instanceof IndexColorModel))

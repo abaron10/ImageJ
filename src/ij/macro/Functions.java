@@ -188,7 +188,6 @@ public class Functions implements MacroConstants, Measurements {
 			case MAKE_TEXT: makeText(); break;
 			case MAKE_ELLIPSE: makeEllipse(); break;
 			case GET_DISPLAYED_AREA: getDisplayedArea(); break;
-			case TO_SCALED: toScaled(); break;
 			case TO_UNSCALED: toUnscaled(); break;
 		}
 	}
@@ -7595,48 +7594,6 @@ public class Functions implements MacroConstants, Measurements {
 		y.setValue(r.y);
 		w.setValue(r.width);
 		h.setValue(r.height);
-	}
-
-	void toScaled() {   //pixel coordinates to calibrated coordinates
-		ImagePlus imp = getImage();
-		Plot plot = (Plot)(getImage().getProperty(Plot.PROPERTY_KEY)); //null if not a plot window
-		int height = imp.getHeight();
-		Calibration cal = imp.getCalibration();
-		interp.getLeftParen();
-		if (isArrayArg()) {
-			Variable[] x = getArray();
-			interp.getComma();
-			Variable[] y = getArray();
-			interp.getRightParen();
-			for (int i=0; i<x.length; i++)
-				x[i].setValue(plot==null ? cal.getX(x[i].getValue()) : plot.descaleX((int)(x[i].getValue()+0.5)));
-			for (int i=0; i<y.length; i++)
-				y[i].setValue(plot==null ? cal.getY(y[i].getValue(),height) : plot.descaleY((int)(y[i].getValue()+0.5)));
-		} else {
-			Variable xv = getVariable();
-			Variable yv = null;
-			Variable zv = null;
-			boolean twoArgs = interp.nextToken()==',';
-			if (twoArgs) {
-				interp.getComma();
-				yv = getVariable();
-			}
-			boolean threeArgs = interp.nextToken()==',';
-			if (threeArgs) {
-				interp.getComma();
-				zv = getVariable();
-			}
-			interp.getRightParen();
-			double x = xv.getValue();
-			if (twoArgs) {
-				double y = yv.getValue();
-				xv.setValue(plot == null ? cal.getX(x) : plot.descaleX((int)(x+0.5)));
-				yv.setValue(plot == null ? cal.getY(y,height) : plot.descaleY((int)(y+0.5)));
-				if (threeArgs)
-					zv.setValue(cal.getZ(zv.getValue()));
-			} else //oneArg; convert horizontal length (not the x coordinate, no offset)
-				xv.setValue(x * cal.pixelWidth) ;
-		}
 	}
 
 	void toUnscaled() {   //calibrated coordinates to pixel coordinates

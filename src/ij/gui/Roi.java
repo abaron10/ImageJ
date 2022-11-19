@@ -1035,36 +1035,7 @@ public class Roi extends Object implements Cloneable, java.io.Serializable, Iter
 				height=1;
 				y=y2=yc;
 			}
-			switch (activeHandle) {
-				case 0:
-					x=x2-width;
-					y=y2-height;
-					break;
-				case 1:
-					x=xc-width/2;
-					y=y2-height;
-					break;
-				case 2:
-					y=y2-height;
-					break;
-				case 3:
-					y=yc-height/2;
-					break;
-				case 5:
-					x=xc-width/2;
-					break;
-				case 6:
-					x=x2-width;
-					break;
-				case 7:
-					y=yc-height/2;
-					x=x2-width;
-					break;
-			}
-			if (center) {
-				x=xc-width/2;
-				y=yc-height/2;
-			}
+
 		}
 
 		if (aspect && !constrain) {

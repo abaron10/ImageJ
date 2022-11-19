@@ -93,6 +93,8 @@ public class Macro {
 			return null;
 	}
 
+
+
 	/** Define a set of Macro options for the current Thread. */
 	public static void setOptions(String options) {
 		//IJ.log("setOptions: "+Thread.currentThread().getName()+" "+Thread.currentThread().hashCode()+" "+options); //ts
