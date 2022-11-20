@@ -21,9 +21,6 @@ import java.applet.Applet;
 import java.io.*;
 import java.lang.reflect.*;
 import java.net.*;
-import javax.net.ssl.*;
-import java.security.cert.*;
-import java.security.KeyStore;
 import java.nio.ByteBuffer;
 import java.math.RoundingMode;
 
